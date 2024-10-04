@@ -12,7 +12,8 @@ public class Ejercicio24 {
         do {
             nota = sc.nextInt();
             if (nota != -1) {
-                SumaNotas += nota;
+                SumaNotas = SumaNotas + nota;
+                //SumaNotas += nota es lo mismo que lo de arriba.
                 CuantasNotas++;
                 if (nota == 10) {
                     HayDiez = true;
