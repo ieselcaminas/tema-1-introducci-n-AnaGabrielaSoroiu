@@ -25,12 +25,11 @@ import java.util.Scanner;
             if (bruto <= 500) {
                 impuestos = 0;
             } else if (bruto <= 900) {
-                impuestos = bruto - 500 * 0.25;
+                impuestos = (bruto - 500) * 0.25;
             } else {
                 impuestos = (400 * 0.25) + (bruto - 500 - 400) * 0.45;
             }
 
-            System.out.println("El salario bruto es " + bruto);
             System.out.println("Los impuestos son " + impuestos);
             System.out.println("El salario neto es " + (bruto - impuestos));
 
