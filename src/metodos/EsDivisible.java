@@ -17,6 +17,10 @@ public class EsDivisible {
 
         m = Utilidades.leerEntero("Introduce un segundo número: ");
 
-        System.out.println(esDivisible(n,m));
+        if (esDivisible(n,m)) {
+            System.out.println("Es divisible.");
+        } else {
+            System.out.println("No es divisible.");
+        }
     }
 }
