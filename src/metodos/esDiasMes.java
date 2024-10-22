@@ -2,7 +2,6 @@ package metodos;
 
 public class esDiasMes {
     public static int esMes (int mes) {
-        int dias = 0;
 
         switch (mes) {
             case 1:
@@ -12,17 +11,17 @@ public class esDiasMes {
             case 8:
             case 10:
             case 12:
-                dias = 31;
-                break;
+                return 31;
             case 4:
             case 6:
             case 9:
             case 11:
-                dias = 30;
-                break;
+                return 30;
             case 2:
-                dias = 28;
-        } return dias;
+                return 28;
+            default:
+                return -1;
+        }
     }
 
     public static void main(String[] args) {
@@ -33,7 +32,11 @@ public class esDiasMes {
 
         dia = esMes(mes);
 
-        System.out.println("El mes " + mes + " tiene " + dia + " días.");
+        if (dia == -1) {
+            System.out.println("El mes no existe.");
+        }else {
+            System.out.println("El mes tiene " + dia + " días.");
+        }
 
     }
 }
