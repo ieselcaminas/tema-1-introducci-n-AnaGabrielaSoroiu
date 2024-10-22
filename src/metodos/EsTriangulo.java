@@ -2,12 +2,9 @@ package metodos;
 
 public class EsTriangulo {
     public static boolean esTriangulo(int a, int b, int c) {
-
-        if (a > b + c) {
-            return false;
-        } else if (b > a + c) {
-            return false;
-        } else if (c > a + b) {
+        if ((a > b + c)
+            || (b > a + c)
+            || (c > a + b)){
             return false;
         } else {
             return true;
@@ -26,6 +23,11 @@ public class EsTriangulo {
 
         c = Utilidades.leerEntero("Ingrese el tamaño del tercer palo: ");
 
-        System.out.println(esTriangulo(a, b, c));
+        if (esTriangulo(a, b, c)){
+            System.out.println("Se puede hacer.");
+        } else {
+            System.out.println("No se puede hacer.");
+        }
+
     }
 }
